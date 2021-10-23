@@ -1,5 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:fitnessapp/ui/components/navigation_bar.dart';
+import 'package:fitnessapp/views/homescreen/homescreen.dart';
 import 'package:flutter/material.dart';
 
 class Root extends StatefulWidget {
@@ -44,11 +45,7 @@ class _RootState extends State<Root> {
   }
 
   final List<Widget> screens = [
-    Container(
-      height: 500,
-      width: double.infinity,
-      decoration: const BoxDecoration(color: Colors.red),
-    ),
+    const Homescreen(),
     Container(
       height: 500,
       width: double.infinity,

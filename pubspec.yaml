@@ -38,7 +38,8 @@ dependencies:
   shared_preferences: ^2.0.8
   statusbarz: ^1.0.2
   syncfusion_flutter_sliders: ^19.3.46
-  
+  syncfusion_flutter_charts: ^19.3.46
+
   # animations
   animations: ^2.0.2
   show_up_animation: ^2.0.0
