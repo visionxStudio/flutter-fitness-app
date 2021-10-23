@@ -80,14 +80,16 @@ class AnimatedBottomBar extends StatelessWidget {
 }
 
 class AnimatedBottomBarItem {
-  final Icon icon;
+  // final Icon icon;
+  final String image;
   final Text title;
 
   Color activeColor;
   Color inactiveColor;
 
   AnimatedBottomBarItem({
-    required this.icon,
+    // required this.icon,
+    required this.image,
     required this.title,
     this.activeColor = const Color(0xff272e81),
     this.inactiveColor = const Color(0xff9496c1),
@@ -128,16 +130,24 @@ class _FlashTabBarItem extends StatelessWidget {
             AnimatedAlign(
               duration: animationDuration,
               child: AnimatedOpacity(
-                  opacity: isSelected ? 1.0 : 1.0,
-                  duration: animationDuration,
-                  child: IconTheme(
-                    data: IconThemeData(
-                        size: iconSize,
-                        color: isSelected
-                            ? item.activeColor.withOpacity(1)
-                            : item.inactiveColor),
-                    child: item.icon,
-                  )),
+                opacity: isSelected ? 1.0 : 1.0,
+                duration: animationDuration,
+                // child: IconTheme(
+                //   data: IconThemeData(
+                //       size: iconSize,
+                //       color: isSelected
+                //           ? item.activeColor.withOpacity(1)
+                //           : item.inactiveColor),
+                //   child: item.icon,
+                // ),
+                child: Image.asset(
+                  item.image,
+                  height: 40,
+                  color: isSelected
+                      ? item.activeColor.withOpacity(0)
+                      : item.inactiveColor,
+                ),
+              ),
               alignment: isSelected ? Alignment.topCenter : Alignment.center,
             ),
             AnimatedPositioned(

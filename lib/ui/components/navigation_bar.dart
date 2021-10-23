@@ -42,6 +42,7 @@
 //   }
 // }
 
+import 'package:fitnessapp/constants/strings.dart';
 import 'package:fitnessapp/ui/components/animated_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -59,6 +60,7 @@ class AppBottomNavigationBar extends StatefulWidget {
 }
 
 class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
+  final BottomBarIcons _icons = BottomBarIcons();
   @override
   Widget build(BuildContext context) {
     const activeColor = Color(0xff9A50FD);
@@ -67,22 +69,26 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
       animationDuration: const Duration(milliseconds: 600),
       items: [
         AnimatedBottomBarItem(
-          icon: const Icon(Icons.model_training),
-          title: const Text('Training'),
+          // icon: const Icon(Icons.model_training),
+          image: _icons.workout,
+          title: const Text('Workout'),
           activeColor: activeColor,
         ),
         AnimatedBottomBarItem(
-          icon: const Icon(Icons.search),
-          title: const Text('Discovery'),
-          activeColor: activeColor,
-        ),
-        AnimatedBottomBarItem(
-          icon: const Icon(Icons.highlight),
+          // icon: const Icon(Icons.search),
+          image: _icons.report,
           title: const Text('Reports'),
           activeColor: activeColor,
         ),
         AnimatedBottomBarItem(
-          icon: const Icon(Icons.settings),
+          // icon: const Icon(Icons.highlight),
+          image: _icons.custom,
+          title: const Text('Custom'),
+          activeColor: activeColor,
+        ),
+        AnimatedBottomBarItem(
+          // icon: const Icon(Icons.settings),
+          image: _icons.settings,
           title: const Text('Settings'),
           activeColor: activeColor,
         ),
