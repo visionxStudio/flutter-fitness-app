@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'dart:ui' as ui;
 
 class CircularHomeChart extends StatefulWidget {
   const CircularHomeChart({Key? key}) : super(key: key);

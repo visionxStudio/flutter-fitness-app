@@ -1,4 +1,3 @@
-import 'package:fitnessapp/ui/charts/circular_home_charts.dart';
 import 'package:flutter/material.dart';
 
 class Homescreen extends StatelessWidget {
@@ -11,7 +10,8 @@ class Homescreen extends StatelessWidget {
         SizedBox(
           height: 40.0,
         ),
-        CircularHomeChart()
+        // Enable this if you want to show chart
+        // CircularHomeChart()
       ],
     );
   }
